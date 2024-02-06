@@ -1,7 +1,5 @@
 n = int(input())
-a = []
-for i in range(n):
-    a.append(int(input()))
-a.reverse()
-for x in a:
-    print(x)
+a = list(map(int, input().split()))
+for i in range((n+1)//2):
+    a[i], a[n-i-1] = a[n-i-1], a[i]
+print(*a)
